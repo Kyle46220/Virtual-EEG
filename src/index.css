@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --ink-0: oklch(0.145 0.012 155);
+    --ink-1: oklch(0.18 0.014 155);
+    --ink-2: oklch(0.225 0.016 155);
+    --line: oklch(0.34 0.025 155);
+    --line-soft: oklch(0.27 0.02 155);
+    --text: oklch(0.92 0.025 145);
+    --muted: oklch(0.69 0.025 155);
+    --phosphor: oklch(0.87 0.24 153);
+    --phosphor-dim: oklch(0.65 0.15 153);
+    --warning: oklch(0.83 0.17 88);
+    --danger: oklch(0.7 0.2 25);
+    --background: 150 12% 7%;
+    --foreground: 140 15% 90%;
+    --border: 150 10% 23%;
+    --input: 150 10% 23%;
+    --ring: 153 85% 60%;
+    --radius: 0;
+  }
+
+  * {
+    box-sizing: border-box;
+    border-color: var(--line);
+  }
+
+  html {
+    color-scheme: dark;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    min-width: 320px;
+    min-height: 100dvh;
+    background: var(--ink-0);
+    color: var(--text);
+    font-family: "Archivo Variable", "Helvetica Neue", sans-serif;
+    font-size: 16px;
+    line-height: 1.55;
+    font-synthesis: none;
+  }
+
+  button,
+  input,
+  textarea,
+  select {
+    font: inherit;
+  }
+
+  button,
+  select {
+    cursor: pointer;
+  }
+
+  button:disabled,
+  input:disabled,
+  textarea:disabled,
+  select:disabled {
+    cursor: not-allowed;
+    opacity: 0.42;
+  }
+
+  button:focus-visible,
+  a:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible,
+  summary:focus-visible {
+    outline: 2px solid var(--phosphor);
+    outline-offset: 3px;
+  }
+
+  ::selection {
+    color: var(--ink-0);
+    background: var(--phosphor);
+  }
+}
